@@ -38,38 +38,21 @@
           </div>
         </div>
 
-        <!-- Carousel -->
-        <div class="carousel" id="homepageCarousel" aria-roledescription="carousel">
-          <button class="carousel-btn prev" data-action="prev" aria-label="Previous">‹</button>
-          <div class="carousel-track">
-            <div class="carousel-slide" data-index="0">
-              <img src="assets/IMG_6701.jpg" alt="Misty Dusk">
-              <div class="carousel-caption">Misty Dusk — Acrylic on canvas. A study of soft evening light.</div>
-            </div>
-            <div class="carousel-slide" data-index="1">
-              <img src="assets/IMG_6702.jpg" alt="Golden Meadow">
-              <div class="carousel-caption">Golden Meadow — Warm grasses and late sun rendered in acrylic.</div>
-            </div>
-            <div class="carousel-slide" data-index="2">
-              <img src="assets/IMG_6703.jpg" alt="Blue Ridge">
-              <div class="carousel-caption">Blue Ridge — Layered mountain study in cool blues and violets.</div>
-            </div>
-            <div class="carousel-slide" data-index="3">
-              <img src="assets/IMG_6704.jpg" alt="Harbor Light">
-              <div class="carousel-caption">Harbor Light — Textured sky and reflective highlights.</div>
-            </div>
-            <div class="carousel-slide" data-index="4">
-              <img src="assets/IMG_6705.jpg" alt="Quiet Path">
-              <div class="carousel-caption">Quiet Path — Intimate landscape focusing on mood and tone.</div>
-            </div>
-            <div class="carousel-slide" data-index="5">
-              <img src="assets/IMG_6706.jpg" alt="Portrait in Amber">
-              <div class="carousel-caption">Portrait in Amber — Warm portrait study exploring light on form.</div>
-            </div>
+        <!-- Feature artwork + thumbnail selector (replaces carousel) -->
+        <div class="feature-wrap">
+          <div class="feature-frame">
+            <img id="featureImage" src="assets/IMG_6701.jpg" alt="Featured artwork">
+            <div class="feature-caption">Misty Dusk — Acrylic on canvas. A study of soft evening light and mood.</div>
           </div>
-          <button class="carousel-btn next" data-action="next" aria-label="Next">›</button>
 
-          <div class="carousel-dots" aria-hidden="false"></div>
+          <div class="thumbs" id="featureThumbs">
+            <button class="thumb" data-src="assets/IMG_6701.jpg" data-caption="Misty Dusk — Acrylic on canvas. A study of soft evening light and mood."><img src="assets/IMG_6701.jpg" alt="Misty Dusk"></button>
+            <button class="thumb" data-src="assets/IMG_6702.jpg" data-caption="Golden Meadow — Warm grasses and late sun rendered in acrylic."><img src="assets/IMG_6702.jpg" alt="Golden Meadow"></button>
+            <button class="thumb" data-src="assets/IMG_6703.jpg" data-caption="Blue Ridge — Layered mountain study in cool blues and violets."><img src="assets/IMG_6703.jpg" alt="Blue Ridge"></button>
+            <button class="thumb" data-src="assets/IMG_6704.jpg" data-caption="Harbor Light — Textured sky and reflective highlights."><img src="assets/IMG_6704.jpg" alt="Harbor Light"></button>
+            <button class="thumb" data-src="assets/IMG_6705.jpg" data-caption="Quiet Path — Intimate landscape focusing on mood and tone."><img src="assets/IMG_6705.jpg" alt="Quiet Path"></button>
+            <button class="thumb" data-src="assets/IMG_6706.jpg" data-caption="Portrait in Amber — Warm portrait study exploring light on form."><img src="assets/IMG_6706.jpg" alt="Portrait in Amber"></button>
+          </div>
         </div>
       </div>
     </section>
