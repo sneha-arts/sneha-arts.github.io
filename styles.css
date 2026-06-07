@@ -35,16 +35,16 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;marg
 .socials{display:flex;gap:1rem;color:var(--muted);font-size:0.95rem}
 
 /* Artist portrait block in hero */
-.artist-bio{display:flex;align-items:center;gap:1.25rem;margin-top:1.5rem}
-.artist-pic{width:140px;height:140px;border-radius:50%;object-fit:cover;border:6px solid rgba(255,255,255,0.98);box-shadow:0 26px 66px rgba(7,18,38,0.14);display:block;background:linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.3));padding:6px}
+.artist-bio{display:flex;align-items:center;gap:1.5rem;margin-top:1.6rem}
+.artist-pic{width:180px;height:180px;border-radius:50%;object-fit:cover;border:8px solid rgba(255,255,255,0.98);box-shadow:0 30px 90px rgba(7,18,38,0.16);display:block;background:linear-gradient(135deg, rgba(255,255,255,0.78), rgba(255,255,255,0.35));padding:8px}
 .artist-meta{line-height:1.05}
-.artist-name{font-weight:800;color:var(--fg);font-size:1.18rem}
-.artist-role{font-size:1.04rem;color:var(--muted);margin-top:4px}
+.artist-name{font-weight:800;color:var(--fg);font-size:1.28rem}
+.artist-role{font-size:1.06rem;color:var(--muted);margin-top:6px}
 
 @media (max-width:900px){
-  .artist-bio{justify-content:flex-start;gap:0.8rem}
-  .artist-pic{width:108px;height:108px}
-  .artist-name{font-size:1.05rem}
+  .artist-bio{justify-content:flex-start;gap:0.9rem}
+  .artist-pic{width:128px;height:128px}
+  .artist-name{font-size:1.08rem}
 }
 
 .feature-frame img{width:100%;height:520px;object-fit:contain;object-position:center center;border-radius:14px;box-shadow:0 26px 70px rgba(7,18,38,0.08);border:6px solid rgba(255,255,255,0.7);background:var(--card);padding:12px}
