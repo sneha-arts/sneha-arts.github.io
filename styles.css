@@ -1,6 +1,6 @@
 :root{
-  --bg: linear-gradient(180deg, #fff7fb 0%, #fffaf0 35%, #f7fbff 100%); /* soft pastel wash */
-  --bg-solid:#fffaf6; /* fallback/solid */
+  --bg: radial-gradient(600px 400px at 10% 15%, rgba(191,230,216,0.12) 0%, transparent 25%), radial-gradient(520px 420px at 90% 80%, rgba(183,140,241,0.10) 0%, transparent 30%), linear-gradient(180deg,#fff7fb 0%, #fffaf0 35%, #eef8ff 100%), repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 8px); /* layered wash + subtle texture */
+  --bg-solid:#fff6f9; /* fallback/solid */
   --fg:#0b1220; /* deep charcoal */
   --muted:#6b7280; /* slate */
   --accent:#b794f4; /* pastel lavender */
@@ -88,7 +88,7 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;marg
 }
 
 /* soft hero accent */
-.hero-large:before{content:"";position:absolute;right:-120px;top:-40px;width:520px;height:520px;background:radial-gradient(circle at 30% 30%, rgba(183,140,241,0.18), rgba(255,179,179,0.10) 35%, rgba(191,230,216,0.06) 60%, transparent 70%);filter:blur(36px);transform:rotate(8deg);pointer-events:none}
+.hero-large:before{content:"";position:absolute;right:-160px;top:-60px;width:640px;height:640px;background:radial-gradient(circle at 25% 25%, rgba(183,140,241,0.20) 0%, rgba(255,179,179,0.12) 32%, rgba(191,230,216,0.08) 58%, transparent 72%), radial-gradient(circle at 80% 80%, rgba(255,214,165,0.08), transparent 40%);filter:blur(46px);transform:rotate(6deg);opacity:0.95;pointer-events:none}
 
 /* Header polish */
 .site-title{font-family:'Playfair Display', serif;font-weight:700;margin:0;font-size:1.5rem;letter-spacing:0.6px}
