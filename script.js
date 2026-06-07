@@ -90,4 +90,45 @@ document.addEventListener('DOMContentLoaded',()=>{
         })
         .catch(()=>{});
     })();
+
+    /* Embed external Canva About page in a modal when About nav is clicked */
+    (function(){
+      const canvaHost = 'snehas-arts.my.canva.site';
+      const links = Array.from(document.querySelectorAll('a[href*="' + canvaHost + '"]'));
+      const modal = document.getElementById('canvaModal');
+      const frame = document.getElementById('canvaFrame');
+      const closeBtn = modal ? modal.querySelector('.canva-close') : null;
+
+      function openCanva(href){
+        if(!modal || !frame) return;
+        frame.src = href;
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden','false');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeCanva(){
+        if(!modal || !frame) return;
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden','true');
+        // unload iframe to free resources
+        try{ frame.src = ''; }catch(e){}
+        document.body.style.overflow = '';
+      }
+
+      links.forEach(a=>{
+        a.addEventListener('click', e=>{
+          // intercept and open modal instead of navigating
+          e.preventDefault();
+          const href = a.href;
+          openCanva(href);
+        });
+      });
+
+      if(closeBtn) closeBtn.addEventListener('click', closeCanva);
+      document.addEventListener('keyup', e=>{ if(e.key==='Escape' && modal && modal.classList.contains('open')) closeCanva(); });
+      // click backdrop to close
+      if(modal){
+        modal.addEventListener('click', e=>{ if(e.target === modal || e.target.classList.contains('canva-modal__backdrop')) closeCanva(); });
+      }
+    })();
 });
