@@ -69,4 +69,25 @@ document.addEventListener('DOMContentLoaded',()=>{
     if(window.AOS){
       AOS.init({duration:600, once:true, easing:'ease-out-cubic'});
     }
+
+    // check for site version updates (cache-busting)
+    (function(){
+      fetch('/site-version.txt', {cache:'no-store'})
+        .then(r=> r.text())
+        .then(ver=>{
+          if(!ver) return;
+          ver = ver.trim();
+          try{
+            const current = localStorage.getItem('siteVersion');
+            if(current && current !== ver){
+              // new version available — force a cache-busting navigation
+              const next = window.location.pathname + window.location.search + (window.location.search ? '&' : '?') + '_v=' + encodeURIComponent(ver);
+              window.location.replace(next);
+            } else {
+              localStorage.setItem('siteVersion', ver);
+            }
+          }catch(e){ /* ignore storage errors */ }
+        })
+        .catch(()=>{});
+    })();
 });
