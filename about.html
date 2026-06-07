@@ -1,9 +1,11 @@
 <!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About — Sneha Arts</title>
+  <meta name="description" content="About Sneha — acrylic landscapes and portrait artist">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,21 +15,40 @@
       <nav class="site-nav">
         <a href="index.html">Home</a>
         <a href="gallery.html">Gallery</a>
-        <a href="https://snehas-arts.my.canva.site/" target="_blank" rel="noopener">About</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
-    <h2>About Sneha</h2>
-    <p>Sneha is a landscape and portrait artist specializing in acrylics. Her work explores light, texture, and color through layered brushwork and thoughtful composition.</p>
+    <section class="hero">
+      <h2 style="margin-top:0">About Sneha</h2>
+      <p class="lede">Sneha is an acrylic painter working with layered color and textured brushwork to capture quiet moments in landscapes and the nuance of portraiture. She accepts commissions and offers limited edition prints.</p>
+    </section>
 
-    <section class="bio-grid">
-      <img src="assets/IMG_6713.jpg" alt="Sneha artwork">
+    <section class="bio-grid" style="margin-top:1.25rem;">
+      <img src="assets/artist-pics/sneha1.jpg" alt="Sneha portrait" />
       <div>
         <h3>Artist Statement</h3>
-        <p>Working primarily with acrylics, Sneha seeks to capture fleeting moods of landscapes and the quiet personality of sitters. Commissions and prints are available — contact for details.</p>
+        <p>I work intuitively with acrylics, building layers of color and texture until a quiet atmosphere emerges. My landscapes focus on light and mood; my portraits aim to reveal personality through simplified forms and thoughtful color choices. Each piece is hand-painted and available for commission.</p>
+
+        <h4 style="margin-top:0.8rem">Commissions & Prints</h4>
+        <p>If you'd like a commissioned portrait or landscape, please <a href="contact.html">get in touch</a>. Limited edition prints are available on request.</p>
+
+        <div style="margin-top:1rem">
+          <a class="btn btn-primary" href="contact.html">Commission</a>
+          <a class="btn btn-ghost" href="gallery.html">View Gallery</a>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:2rem">
+      <h3>Selected works</h3>
+      <div class="grid gallery-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
+        <figure><img loading="lazy" src="assets/IMG_6719.jpg" alt="Work"><figcaption>Cloud Over Valley</figcaption></figure>
+        <figure><img loading="lazy" src="assets/IMG_6702.jpg" alt="Work"><figcaption>Golden Meadow</figcaption></figure>
+        <figure><img loading="lazy" src="assets/IMG_6706.jpg" alt="Work"><figcaption>Portrait in Amber</figcaption></figure>
       </div>
     </section>
   </main>
@@ -39,9 +60,8 @@
   </footer>
 
   <script src="script.js"></script>
-  <!-- Canva About modal (embedded) -->
-  <div id="canvaModal" class="canva-modal" aria-hidden="true">
-    <div class="canva-modal__backdrop"></div>
+</body>
+</html>
     <div class="canva-modal__content" role="dialog" aria-modal="true">
       <button class="canva-close" aria-label="Close">×</button>
       <iframe id="canvaFrame" src="" loading="lazy" title="About Sneha"></iframe>
