@@ -55,4 +55,13 @@ document.addEventListener('DOMContentLoaded',()=>{
       if(lb){ lbImg.src = featureImage.src; lb.classList.add('lb-open'); lb.setAttribute('aria-hidden','false'); }
     });
   }
+
+    // trigger entrance animations
+    const heroText = document.querySelector('.hero-text.center');
+    const featureFrame = document.querySelector('.feature-frame');
+    if(heroText) setTimeout(()=> heroText.classList.add('animate'), 150);
+    if(featureFrame) setTimeout(()=> featureFrame.classList.add('animate'), 300);
+
+    const galleryFigures = Array.from(document.querySelectorAll('.gallery-grid figure'));
+    galleryFigures.forEach((fig,i)=> setTimeout(()=> fig.classList.add('animate'), 350 + i*40));
 });
