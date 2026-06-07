@@ -98,6 +98,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       const modal = document.getElementById('canvaModal');
       const frame = document.getElementById('canvaFrame');
       const closeBtn = modal ? modal.querySelector('.canva-close') : null;
+      let canvaCheckTimer = null;
 
       function openCanva(href){
         if(!modal || !frame) return;
@@ -105,6 +106,31 @@ document.addEventListener('DOMContentLoaded',()=>{
         modal.classList.add('open');
         modal.setAttribute('aria-hidden','false');
         document.body.style.overflow = 'hidden';
+
+        // if iframe is blocked by X-Frame-Options/CSP, detect and fallback
+        if(canvaCheckTimer) clearTimeout(canvaCheckTimer);
+        canvaCheckTimer = setTimeout(()=>{
+          let blocked = false;
+          try{
+            // Accessing iframe document will throw on cross-origin access in many cases,
+            // but when the resource is blocked from embedding the document may be empty or inaccessible.
+            const doc = frame.contentDocument || (frame.contentWindow && frame.contentWindow.document);
+            if(!doc || !doc.body || doc.body.childNodes.length === 0) blocked = true;
+          }catch(e){
+            // If access is denied, assume embedding failed and treat as blocked fallback.
+            blocked = true;
+          }
+
+          if(blocked){
+            // close modal and open in new tab
+            try{ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); }catch(e){}
+            try{ frame.src = ''; }catch(e){}
+            document.body.style.overflow = '';
+            // notify and open in new tab
+            try{ window.open(href, '_blank'); }catch(e){}
+            try{ alert('The external About page cannot be embedded; opening in a new tab.'); }catch(e){}
+          }
+        }, 1200);
       }
       function closeCanva(){
         if(!modal || !frame) return;
@@ -113,6 +139,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         // unload iframe to free resources
         try{ frame.src = ''; }catch(e){}
         document.body.style.overflow = '';
+        if(canvaCheckTimer) clearTimeout(canvaCheckTimer);
       }
 
       links.forEach(a=>{
