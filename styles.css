@@ -47,18 +47,7 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;marg
   .artist-name{font-size:1.08rem}
 }
 
-/* Canva About modal */
-.canva-modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:1400}
-.canva-modal.open{display:flex}
-.canva-modal__backdrop{position:absolute;inset:0;background:rgba(7,18,38,0.6);backdrop-filter:blur(2px)}
-.canva-modal__content{position:relative;width:min(1100px,96%);height:min(80vh,900px);background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 40px 120px rgba(2,6,23,0.3);display:flex;flex-direction:column}
-.canva-close{position:absolute;right:12px;top:12px;background:rgba(255,255,255,0.9);border:0;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:18px;z-index:2}
-#canvaFrame{width:100%;height:100%;border:0}
-
-@media (max-width:720px){
-  .canva-modal__content{height:86vh}
-  .canva-close{right:8px;top:8px;padding:6px}
-}
+/* Canva modal removed: styles no longer needed */
 
 .feature-frame img{width:100%;height:520px;object-fit:contain;object-position:center center;border-radius:14px;box-shadow:0 26px 70px rgba(7,18,38,0.08);border:6px solid rgba(255,255,255,0.7);background:var(--card);padding:12px}
 
