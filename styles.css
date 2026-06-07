@@ -1,0 +1,44 @@
+:root{
+  --bg:#fff;
+  --fg:#111;
+  --muted:#6b6b6b;
+  --accent:#8b5cf6;
+  --wrap:1200px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;color:var(--fg);background:var(--bg);line-height:1.5}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:1rem}
+.site-header{border-bottom:1px solid #eee}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.site-title{font-weight:700;margin:0;font-size:1.25rem}
+.site-nav a{margin-left:1rem;color:var(--muted);text-decoration:none}
+.hero{padding:2rem 0}
+.hero-inner{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center}
+.hero-text h2{margin-top:0;font-size:1.8rem}
+.hero-image img{width:100%;height:320px;object-fit:cover;border-radius:8px;box-shadow:0 10px 25px rgba(0,0,0,0.08)}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:0.6rem 1rem;border-radius:8px;text-decoration:none}
+.preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.preview-grid img{width:100%;height:180px;object-fit:cover;border-radius:6px}
+.grid{display:grid;gap:0.8rem}
+.gallery-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.gallery-grid img{width:100%;height:220px;object-fit:cover;border-radius:6px;cursor:pointer;display:block}
+.lede{color:var(--muted)}
+.site-footer{border-top:1px solid #eee;padding:1rem 0;margin-top:2rem}
+.bio-grid{display:grid;grid-template-columns:320px 1fr;gap:1rem;align-items:center}
+.bio-grid img{width:100%;height:260px;object-fit:cover;border-radius:8px}
+.contact-form{max-width:560px;display:grid;gap:0.6rem}
+.contact-form label{display:flex;flex-direction:column;font-size:0.95rem;color:var(--muted)}
+.contact-form input,.contact-form textarea{padding:0.6rem;border:1px solid #e6e6e6;border-radius:6px}
+
+/* Lightbox */
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.8);display:none;align-items:center;justify-content:center;padding:2rem}
+.lightbox img{max-width:95%;max-height:85%;border-radius:6px}
+.lightbox.lb-open{display:flex}
+.lb-close{position:absolute;right:1rem;top:1rem;background:transparent;color:#fff;border:0;font-size:2rem;cursor:pointer}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .preview-grid{grid-template-columns:repeat(2,1fr)}
+  .bio-grid{grid-template-columns:1fr}
+}
