@@ -64,4 +64,9 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     const galleryFigures = Array.from(document.querySelectorAll('.gallery-grid figure'));
     galleryFigures.forEach((fig,i)=> setTimeout(()=> fig.classList.add('animate'), 350 + i*40));
+
+    // initialize AOS if available
+    if(window.AOS){
+      AOS.init({duration:600, once:true, easing:'ease-out-cubic'});
+    }
 });

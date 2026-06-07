@@ -7,6 +7,8 @@
   <meta name="description" content="Sneha — acrylic landscape and portrait artist. Commissions and prints available.">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <header class="site-header">
@@ -31,10 +33,10 @@
             <a class="btn btn-primary" href="gallery.html">View Gallery</a>
             <a class="btn btn-ghost" href="contact.html">Commission</a>
           </div>
-          <div class="socials">
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
-            <a href="gallery.html">Gallery</a>
+          <div class="socials" data-aos="fade-up">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener"><i class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Facebook</span></a>
+            <a href="gallery.html"><i class="fas fa-image" aria-hidden="true"></i><span class="sr-only">Gallery</span></a>
           </div>
 
           <div class="artist-bio">
@@ -48,18 +50,18 @@
 
         <!-- Feature artwork + thumbnail selector (replaces carousel) -->
         <div class="feature-wrap">
-          <div class="feature-frame">
+          <div class="feature-frame" data-aos="zoom-in">
               <img id="featureImage" loading="lazy" src="assets/IMG_6701.jpg" alt="Featured artwork">
             <div class="feature-caption">Misty Dusk — Acrylic on canvas. A study of soft evening light and mood.</div>
           </div>
 
           <div class="thumbs" id="featureThumbs">
-              <button class="thumb" data-src="assets/IMG_6701.jpg" data-caption="Misty Dusk — Acrylic on canvas. A study of soft evening light and mood."><img loading="lazy" src="assets/IMG_6701.jpg" alt="Misty Dusk"></button>
-              <button class="thumb" data-src="assets/IMG_6702.jpg" data-caption="Golden Meadow — Warm grasses and late sun rendered in acrylic."><img loading="lazy" src="assets/IMG_6702.jpg" alt="Golden Meadow"></button>
-              <button class="thumb" data-src="assets/IMG_6703.jpg" data-caption="Blue Ridge — Layered mountain study in cool blues and violets."><img loading="lazy" src="assets/IMG_6703.jpg" alt="Blue Ridge"></button>
-              <button class="thumb" data-src="assets/IMG_6725.jpg" data-caption="Harbor Light — Textured sky and reflective highlights."><img loading="lazy" src="assets/IMG_6704.jpg" alt="Harbor Light"></button>
-              <button class="thumb" data-src="assets/IMG_6715.jpg" data-caption="Quiet Path — Intimate landscape focusing on mood and tone."><img loading="lazy" src="assets/IMG_6705.jpg" alt="Quiet Path"></button>
-              <button class="thumb" data-src="assets/IMG_6723.jpg" data-caption="Portrait in Amber — Warm portrait study exploring light on form."><img loading="lazy" src="assets/IMG_6706.jpg" alt="Portrait in Amber"></button>
+              <button class="thumb" data-src="assets/IMG_6701.jpg" data-caption="Misty Dusk — Acrylic on canvas. A study of soft evening light and mood." data-aos="fade-up"><img loading="lazy" src="assets/IMG_6701.jpg" alt="Misty Dusk"></button>
+              <button class="thumb" data-src="assets/IMG_6702.jpg" data-caption="Golden Meadow — Warm grasses and late sun rendered in acrylic." data-aos="fade-up" data-aos-delay="30"><img loading="lazy" src="assets/IMG_6702.jpg" alt="Golden Meadow"></button>
+              <button class="thumb" data-src="assets/IMG_6703.jpg" data-caption="Blue Ridge — Layered mountain study in cool blues and violets." data-aos="fade-up" data-aos-delay="60"><img loading="lazy" src="assets/IMG_6703.jpg" alt="Blue Ridge"></button>
+              <button class="thumb" data-src="assets/IMG_6725.jpg" data-caption="Harbor Light — Textured sky and reflective highlights." data-aos="fade-up" data-aos-delay="90"><img loading="lazy" src="assets/IMG_6704.jpg" alt="Harbor Light"></button>
+              <button class="thumb" data-src="assets/IMG_6715.jpg" data-caption="Quiet Path — Intimate landscape focusing on mood and tone." data-aos="fade-up" data-aos-delay="120"><img loading="lazy" src="assets/IMG_6705.jpg" alt="Quiet Path"></button>
+              <button class="thumb" data-src="assets/IMG_6723.jpg" data-caption="Portrait in Amber — Warm portrait study exploring light on form." data-aos="fade-up" data-aos-delay="150"><img loading="lazy" src="assets/IMG_6706.jpg" alt="Portrait in Amber"></button>
           </div>
         </div>
       </div>
@@ -93,5 +95,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </body>
 </html>
