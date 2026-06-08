@@ -98,6 +98,14 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;marg
 .gallery-grid figure img{display:block}
 .gallery-grid figure figcaption{padding:0.6rem 0 1rem;color:var(--muted);font-size:0.95rem}
 
+/* Price label styling (centered) */
+.price{display:block;text-align:center;font-weight:700;color:var(--fg);margin-top:0.35rem}
+
+/* Ensure preview grid figures center their price */
+.preview-grid .preview-item{display:block;background:var(--card);padding:12px;border-radius:14px;box-shadow:0 18px 40px rgba(7,18,38,0.06);border:1px solid rgba(15,23,42,0.04);transition:transform .18s ease,box-shadow .18s ease;text-align:center}
+.preview-grid .preview-item img{width:100%;height:180px;object-fit:cover;object-position:center center;border-radius:10px;display:block}
+.preview-grid .preview-item .price{margin-top:0.5rem}
+
 @media (max-width:900px){
   .feature-frame{width:100%}
   .feature-frame img{height:380px}
