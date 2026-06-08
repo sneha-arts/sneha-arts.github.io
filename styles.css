@@ -1,6 +1,6 @@
 :root{
-  --bg: radial-gradient(600px 400px at 10% 15%, rgba(191,230,216,0.12) 0%, transparent 25%), radial-gradient(520px 420px at 90% 80%, rgba(183,140,241,0.10) 0%, transparent 30%), linear-gradient(180deg,#fff7fb 0%, #fffaf0 35%, #eef8ff 100%), repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 8px); /* layered wash + subtle texture */
-  --bg-solid:#fff6f9; /* fallback/solid */
+  --bg: radial-gradient(600px 400px at 10% 15%, rgba(191,230,216,0.18) 0%, transparent 28%), radial-gradient(520px 420px at 90% 80%, rgba(183,140,241,0.16) 0%, transparent 36%), linear-gradient(180deg,#fff3f8 0%, #fff2ea 35%, #e8f6ff 100%), repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0 1px, transparent 1px 8px); /* slightly richer wash + a touch more depth */
+  --bg-solid:#fff3f6; /* fallback/solid */
   --fg:#0b1220; /* deep charcoal */
   --muted:#6b7280; /* slate */
   --accent:#b794f4; /* pastel lavender */
@@ -21,7 +21,7 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;marg
 .site-nav a:hover{background:linear-gradient(90deg, rgba(183,140,241,0.12), rgba(255,179,179,0.09));color:var(--fg)}
 
 /* Hero */
-.hero-large{padding:3.75rem 0 3.25rem;background:linear-gradient(180deg,#fff7fb 0%, #fffaf0 45%, #f0fbff 100%);position:relative;overflow:visible}
+.hero-large{padding:3.75rem 0 3.25rem;background:linear-gradient(180deg,#fff2f8 0%, #fff2ea 45%, #e8f6ff 100%);position:relative;overflow:visible}
 .hero-inner{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center}
 .hero-text.center{max-width:720px}
 .hero-title{font-family:'Playfair Display',serif;font-size:2.8rem;margin:0 0 0.6rem;color:#2d2338;letter-spacing:0.2px}
