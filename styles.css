@@ -24,8 +24,8 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;marg
 .hero-large{padding:3.75rem 0 3.25rem;background:linear-gradient(180deg,#ffecf6 0%, #fff0e2 45%, #dcefff 100%);position:relative;overflow:visible}
 .hero-inner{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center}
 .hero-text.center{max-width:720px}
-.hero-title{font-family:'Playfair Display',serif;font-size:2.8rem;margin:0 0 0.6rem;color:#2d2338;letter-spacing:0.2px}
-.hero-sub{color:var(--muted);margin:0 0 1rem;font-size:1.05rem}
+.hero-title{font-family:'Playfair Display',serif;font-size:3.6rem;margin:0 0 0.6rem;color:#24182a;letter-spacing:0.4px;line-height:1.02}
+.hero-sub{color:rgba(11,18,32,0.85);margin:0 0 1rem;font-size:1.12rem;max-width:680px}
 .hero-lead{max-width:720px;color:rgba(13,18,34,0.85);font-size:1.08rem}
 .hero-actions{display:flex;gap:0.75rem;margin-bottom:0.9rem}
 .btn{display:inline-block;padding:0.65rem 1.05rem;border-radius:12px;text-decoration:none;font-weight:700;letter-spacing:0.2px}
@@ -45,6 +45,8 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;marg
   .artist-bio{justify-content:flex-start;gap:0.9rem}
   .artist-pic{width:128px;height:128px}
   .artist-name{font-size:1.08rem}
+  .hero-title{font-size:2rem}
+  .hero-sub{font-size:1rem}
 }
 
 /* Canva modal removed: styles no longer needed */
