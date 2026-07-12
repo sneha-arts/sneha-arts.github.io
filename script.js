@@ -1,8 +1,40 @@
 document.addEventListener('DOMContentLoaded',()=>{
   const gallery = document.querySelector('.gallery-grid');
+  const previewGrid = document.getElementById('previewGrid');
   const lb = document.getElementById('lightbox');
   const lbImg = document.getElementById('lbImg');
   const lbClose = document.getElementById('lbClose');
+
+  const renderArtworkSections = (artworks) => {
+    if(!artworks || !Array.isArray(artworks)) return;
+    
+    if(gallery){
+      gallery.innerHTML = artworks.map(item => `
+        <figure>
+          <img loading="lazy" src="${item.src}" alt="${item.alt}">
+          <figcaption><span class="desc">${item.title} — ${item.description}</span></figcaption>
+        </figure>
+      `).join('');
+    }
+
+    if(previewGrid){
+      previewGrid.innerHTML = artworks.map(item => `
+        <figure class="preview-item">
+          <a href="gallery.html"><img loading="lazy" src="${item.src}" alt="${item.alt}"></a>
+        </figure>
+      `).join('');
+    }
+
+    setTimeout(()=>{
+      const galleryFigures = Array.from(document.querySelectorAll('.gallery-grid figure'));
+      galleryFigures.forEach((fig,i)=> setTimeout(()=> fig.classList.add('animate'), 350 + i*40));
+    }, 50);
+  };
+
+  // Try to render artworks immediately if available
+  if(typeof window.ARTWORKS !== 'undefined'){
+    renderArtworkSections(window.ARTWORKS);
+  }
 
   if(gallery){
     gallery.addEventListener('click', e=>{
@@ -69,27 +101,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     if(window.AOS){
       AOS.init({duration:600, once:true, easing:'ease-out-cubic'});
     }
-
-    // check for site version updates (cache-busting)
-    (function(){
-      fetch('/site-version.txt', {cache:'no-store'})
-        .then(r=> r.text())
-        .then(ver=>{
-          if(!ver) return;
-          ver = ver.trim();
-          try{
-            const current = localStorage.getItem('siteVersion');
-            if(current && current !== ver){
-              // new version available — force a cache-busting navigation
-              const next = window.location.pathname + window.location.search + (window.location.search ? '&' : '?') + '_v=' + encodeURIComponent(ver);
-              window.location.replace(next);
-            } else {
-              localStorage.setItem('siteVersion', ver);
-            }
-          }catch(e){ /* ignore storage errors */ }
-        })
-        .catch(()=>{});
-    })();
 
     // Removed embedded Canva modal logic (no-op) to prevent overlay behavior.
 });

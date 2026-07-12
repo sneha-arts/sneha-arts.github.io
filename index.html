@@ -69,29 +69,7 @@
 
     <section class="preview wrap">
       <h3>Featured works</h3>
-      <div class="grid preview-grid">
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6701.jpg" alt="IMG_6701"></a><figcaption class="price">AUD $400</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6702.jpg" alt="IMG_6702"></a><figcaption class="price">AUD $450</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6703.jpg" alt="IMG_6703"></a><figcaption class="price">AUD $500</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6704.jpg" alt="IMG_6704"></a><figcaption class="price">AUD $420</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6705.jpg" alt="IMG_6705"></a><figcaption class="price">AUD $600</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6706.jpg" alt="IMG_6706"></a><figcaption class="price">AUD $550</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6707.jpg" alt="IMG_6707"></a><figcaption class="price">AUD $700</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6708.jpg" alt="IMG_6708"></a><figcaption class="price">AUD $480</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6710.jpg" alt="IMG_6710"></a><figcaption class="price">AUD $430</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6712.jpg" alt="IMG_6712"></a><figcaption class="price">AUD $470</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6713.jpg" alt="IMG_6713"></a><figcaption class="price">AUD $520</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6714.jpg" alt="IMG_6714"></a><figcaption class="price">AUD $580</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6715.jpg" alt="IMG_6715"></a><figcaption class="price">AUD $610</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6717.jpg" alt="IMG_6717"></a><figcaption class="price">AUD $440</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6719.jpg" alt="IMG_6719"></a><figcaption class="price">AUD $530</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6722.jpg" alt="IMG_6722"></a><figcaption class="price">AUD $490</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6723.jpg" alt="IMG_6723"></a><figcaption class="price">AUD $650</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6724.jpg" alt="IMG_6724"></a><figcaption class="price">AUD $570</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6725.jpg" alt="IMG_6725"></a><figcaption class="price">AUD $560</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6728.jpg" alt="IMG_6728"></a><figcaption class="price">AUD $460</figcaption></figure>
-        <figure class="preview-item"><a href="gallery.html"><img loading="lazy" src="assets/IMG_6729.jpg" alt="IMG_6729"></a><figcaption class="price">AUD $680</figcaption></figure>
-      </div>
+      <div class="grid preview-grid" id="previewGrid"></div>
     </section>
 
   </main>
@@ -103,6 +81,31 @@
     </div>
   </footer>
 
+  <script>
+    window.ARTWORKS = [
+      {"id":"misty-dusk","title":"Misty Dusk","src":"assets/IMG_6701.jpg","alt":"Misty Dusk","description":"Acrylic on canvas. A quiet meditation on evening light and atmosphere."},
+      {"id":"golden-meadow","title":"Golden Meadow","src":"assets/IMG_6702.jpg","alt":"Golden Meadow","description":"Warm grasses and a late sun study in acrylic."},
+      {"id":"blue-ridge","title":"Blue Ridge","src":"assets/IMG_6703.jpg","alt":"Blue Ridge","description":"Layered mountain study in cool blues and violets."},
+      {"id":"harbor-light","title":"Harbor Light","src":"assets/IMG_6704.jpg","alt":"Harbor Light","description":"Textured sky and reflective highlights."},
+      {"id":"quiet-path","title":"Quiet Path","src":"assets/IMG_6705.jpg","alt":"Quiet Path","description":"Intimate landscape focusing on mood and tone."},
+      {"id":"portrait-in-amber","title":"Portrait in Amber","src":"assets/IMG_6706.jpg","alt":"Portrait in Amber","description":"Warm portrait study exploring light on form."},
+      {"id":"wind-and-wheat","title":"Wind and Wheat","src":"assets/IMG_6707.jpg","alt":"Wind and Wheat","description":"Movement and texture across a sunlit field."},
+      {"id":"coastal-afternoon","title":"Coastal Afternoon","src":"assets/IMG_6708.jpg","alt":"Coastal Afternoon","description":"Seascape with luminous water and sky."},
+      {"id":"window-into-green","title":"Window Into Green","src":"assets/IMG_6710.jpg","alt":"Window Into Green","description":"Dense foliage and layered depth in acrylic."},
+      {"id":"still-figure","title":"Still Figure","src":"assets/IMG_6712.jpg","alt":"Still Figure","description":"Portrait study with expressive brushwork and restraint."},
+      {"id":"sunrise-hills","title":"Sunrise Hills","src":"assets/IMG_6713.jpg","alt":"Sunrise Hills","description":"Early light on rolling hills rendered in washes."},
+      {"id":"evening-reflection","title":"Evening Reflection","src":"assets/IMG_6714.jpg","alt":"Evening Reflection","description":"Calm water reflects a warm evening sky."},
+      {"id":"portrait-study","title":"Portrait Study","src":"assets/IMG_6715.jpg","alt":"Portrait Study","description":"Close-up study emphasizing expression and texture."},
+      {"id":"olive-grove","title":"Olive Grove","src":"assets/IMG_6717.jpg","alt":"Olive Grove","description":"Textured foliage and dappled light in landscape form."},
+      {"id":"cloud-over-valley","title":"Cloud Over Valley","src":"assets/IMG_6719.jpg","alt":"Cloud Over Valley","description":"Atmospheric study of depth and scale."},
+      {"id":"field-edges","title":"Field Edges","src":"assets/IMG_6722.jpg","alt":"Field Edges","description":"Contrast of land and sky with delicate color shifts."},
+      {"id":"muted-shore","title":"Muted Shore","src":"assets/IMG_6723.jpg","alt":"Muted Shore","description":"Soft horizon and restrained palette for calm mood."},
+      {"id":"violet-dusk","title":"Violet Dusk","src":"assets/IMG_6724.jpg","alt":"Violet Dusk","description":"Cool dusk tones and subtle tonal gradients."},
+      {"id":"portrait-with-scarf","title":"Portrait with Scarf","src":"assets/IMG_6725.jpg","alt":"Portrait with Scarf","description":"Portrait highlighting color, cloth, and form."},
+      {"id":"gold-harvest","title":"Gold Harvest","src":"assets/IMG_6728.jpg","alt":"Gold Harvest","description":"Warm tones and textured brushwork in a rural scene."},
+      {"id":"farmers-journey","title":"Farmers Journey","src":"assets/IMG_6729.jpg","alt":"Farmers Journey","description":"A contemplative portrait capturing the essence of rural life."}
+    ];
+  </script>
   <script src="script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   
